@@ -119,3 +119,6 @@ Author:     Mateusz Kulesza <mateusz@altkomakademia.pl>
 AuthorDate: Thu Apr 22 13:36:05 2021 +0200
 Commit:     Mateusz Kulesza <mateusz@altkomakademia.pl>
 CommitDate: Thu Apr 22 13:45:01 2021 +0200
+
+## Git files - rm, mv, .gitignore, .gitkeep
+Commit file operations 
