@@ -165,3 +165,16 @@ second commit
 
 git log
 
+## Git log - filtrowanie historii
+https://git-scm.com/docs/git-log 
+git log --since "2hours ago"
+git log 26d0ae98 -5 --oneline -- test.txt
+git log 26d0a..25c5732 --oneline -- test.txt
+git log 26d0ae98..25c5732 --oneline -- test*
+<!-- 8172ab9 Usunieto plik test.txt
+c2051b2 Polecenie checkout - wyciaganie starych wersji plikow do poczekalni
+3dcf515 Polecenie restore changes
+25c5732 Pierwszy commit -->
+git log --oneline --grep 'test'
+<!-- 8172ab9 Usunieto plik test.txt -->
+
