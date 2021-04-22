@@ -103,4 +103,10 @@ git show 9bf011ff
 
 ## Checkout - wyciagnij stara wersje pliku
 git checkout 63ed94aa test.txt
+git checkout 63ed94aa test.txt innyplik.txt
 
+## Git commit --amend
+git commit --amend -m "Strona o GIT - plik index"
+<!-- New commit, new hash -->
+git add .
+git commit --amend --no-edit
