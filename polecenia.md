@@ -91,3 +91,6 @@ git log
 git diff HEAD 25c5732
 git diff HEAD master~1
 
+## Restore - wycofaj lokalne zmiany (tracimy niezpisane zmiany !!!)
+git restore plik_z_niepotrzebnymi_zmainami.txt
+
