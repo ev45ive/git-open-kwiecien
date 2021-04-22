@@ -90,7 +90,17 @@ git log
 ## Diff - podglad zmian
 git diff HEAD 25c5732
 git diff HEAD master~1
+git diff HEAD master~1 test.txt
+git diff 63ed94aa test.txt
 
 ## Restore - wycofaj lokalne zmiany (tracimy niezpisane zmiany !!!)
 git restore plik_z_niepotrzebnymi_zmainami.txt
+
+## Show - podglad okreslonego commita
+git show master
+git show master~3
+git show 9bf011ff
+
+## Checkout - wyciagnij stara wersje pliku
+git checkout 63ed94aa test.txt
 

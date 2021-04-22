@@ -1,3 +1,1 @@
-Witaj w GIT !!!
-
-Zmiany.
+Witaj w GIT!
