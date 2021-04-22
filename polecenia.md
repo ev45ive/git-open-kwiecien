@@ -110,3 +110,12 @@ git commit --amend -m "Strona o GIT - plik index"
 <!-- New commit, new hash -->
 git add .
 git commit --amend --no-edit
+
+## Changing commits - kazda zmiana tworzy nowy unikalny commit id
+git show --format="fuller" 46164767
+
+commit 461647677e92b1c1532714f2eeb7c7e8aa7b37a1 (HEAD -> master)
+Author:     Mateusz Kulesza <mateusz@altkomakademia.pl>
+AuthorDate: Thu Apr 22 13:36:05 2021 +0200
+Commit:     Mateusz Kulesza <mateusz@altkomakademia.pl>
+CommitDate: Thu Apr 22 13:45:01 2021 +0200
