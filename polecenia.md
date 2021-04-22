@@ -122,3 +122,46 @@ CommitDate: Thu Apr 22 13:45:01 2021 +0200
 
 ## Git files - rm, mv, .gitignore, .gitkeep
 Commit file operations 
+
+## Git internals - plumbing - nie rób tego w domu!
+git hash-object test.txt  > 30d74d258442c7c65512eafab474568dd706c430
+
+git hash-object -w test.txt
+git cat-file -p 30d74d258442c7c65512eafab474568dd706c430 > test.txt
+
+git update-index --add --cacheinfo 100644 30d74d258442c7c65512eafab474568dd706c430 test.txt
+git write-tree
+3b6d230f2feef161a7cd34900cc63f900ba211b3
+
+git update-index --add --cacheinfo 100644 30d74d258442c7c65512eafab474568dd706c430 test2.txt
+git write-tree
+b2be2734095c5d869ab0fe2fe41f9068040c1d27
+
+git read-tree --prefix=podkatalog b2be2734095c5d869ab0fe2fe41f9068040c1d27
+ git write-tree
+95bfd5df30043c8931fa9ff9c0fc2ec74851025a
+git cat-file -p 95bfd5df30043c8931fa9ff9c0fc2ec74851025a
+040000 tree b2be2734095c5d869ab0fe2fe41f9068040c1d27    podkatalog
+100644 blob 30d74d258442c7c65512eafab474568dd706c430    test.txt  
+
+git commit-tree 95bfd5df30043c8931fa9ff9c0fc2ec74851025a -m "first commit"
+b7a7609793568befb616c079e1de65118229128d
+
+
+git update-index --add --cacheinfo 100644 30d74d258442c7c65512eafab474568dd706c430 test123.txt  
+git write-tree
+787d3dc126efcc69ede7c31dd7967367181f9879
+
+git commit-tree 787d3dc126efcc69ede7c31dd7967367181f9879 -m "second commit" -p b7a7609793568befb616c079e1de65118229128d
+3d0bb4a7dcc1fdd704bea1e8bd0a14642b6a852a
+
+git cat-file -p 3d0bb4a7dcc1fdd704bea1e8bd0a14642b6a852a
+tree 787d3dc126efcc69ede7c31dd7967367181f9879
+parent b7a7609793568befb616c079e1de65118229128d
+author Mateusz Kulesza <mateusz@altkomakademia.pl> 1619095425 +0200
+committer Mateusz Kulesza <mateusz@altkomakademia.pl> 1619095425 +0200
+
+second commit
+
+git log
+

@@ -1,2 +1,4 @@
 /strona/log/*.log
 !/strona/log/dziennik.log
+
+internals/
