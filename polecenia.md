@@ -53,5 +53,41 @@ git config --list
 <!-- Kaskada - lokalne nadpisuja globalne, globlne nadpisuja wbudowane -->
 <!-- katalogprojektu/.git/gitconfig -->
 
-git config --unset user.placki 
-git config --unset user.placki 
+git config user.name "Zbyszek"
+git config --unset user.name 
+
+## Config globalny
+C:\Users\<nazwa usera>\.gitconfig
+git config --global user.email "mateusz@altkomakademia.pl"
+git config --global --unset user.email
+
+
+git config --global user.email "mateusz@altkomakademia.pl"
+git config --global user.name "Mateusz Kulesza"
+git config --list --global
+
+cat ~/.gitconfig 
+<!-- [user]
+        email = mateusz@altkomakademia.pl
+        name = Mateusz Kulesza -->
+
+## Commit + message (VIM)
+git commit 
+<!-- Wychodzenie bez zmian-->
+ESC :q ENTER - Quit 
+<!-- Aborting commit due to empty commit message.  -->
+<!-- Wprowadzanie tekstu -->
+ESC a 
+<!-- Wychodzenie bez zapisywania zmian -->
+ESC :q! ENTER - Quit 
+<!-- Zapis i commit  -->
+ESC :wq ENTER
+<!-- Write + Quit -->
+
+## Log - przeglad historii
+git log
+
+## Diff - podglad zmian
+git diff HEAD 25c5732
+git diff HEAD master~1
+
