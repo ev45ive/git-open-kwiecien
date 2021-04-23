@@ -19,3 +19,21 @@
 
 <p>git log --all --graph --merges</p>
 <p>git log --all --graph --no-merges</p>
+
+<h4>Konflikty</h4>
+<pre>
+    <ul>
+        <li><a href="rownolegla/stash.html">stash</a></li>
+ <<<<<<< HEAD
+        <li><a href="rownolegla/branch.html">branch</a></li>
+=======
+        <li><a href="rownolegla/merge.html">merge</a></li>
+ >>>>>>> WIP/merge
+    </ul>
+</pre>
+
+<p>Poprawiamy kod - wybieramy wersje, lub laczymy zmiany</p>
+<p>Usuwamy znaczniki  <<< === >>> </p>
+
+<p>git merge --abort --- resetuje do stanu sprzed merge</p>
+<p>git add + git commit  --- akceptuje rozwiazanie Konfliktu</p>
