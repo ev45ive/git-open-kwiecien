@@ -1,0 +1,60 @@
+<h1>fetch</h1>
+
+<p>Pobiera zmiany do z galezi  ZDALNA_GALAZ do galezi 'remotes/NAZWA_REMOTE/ZDALNA_GALAZ'</p>
+
+<p>git fetch origin master</p>
+<pre>
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 726 bytes | 34.00 KiB/s, done.
+From C:/Projects/szkolenia/./git-open-kwiecien  
+ * branch            master     -> FETCH_HEAD   
+   a2b1b0d..8f24d46  master     -> origin/master
+</pre>
+
+<pre>
+    git branch -v -a
+* master                  a2b1b0d [behind 1] Strona - annotated tag
+  remotes/origin/HEAD     -> origin/master
+  remotes/origin/WIP_logo 56ba529 Logo GIT
+  remotes/origin/master   8f24d46 Strona - praca zdalna - clone
+</pre>
+
+
+<p>Git status pokazuje roznice miedzy lokalnym a remote dla "śledzonej" gałezi</p>
+<pre>
+    On branch master
+    Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.        
+      (use "git pull" to update your local branch)
+</pre>
+
+<h3>Merge zdalnej galezi</h3>
+<pre>
+    git fetch origin master
+    
+    cat ./.git/FETCH_HEAD
+    8f24d462f70d69096a51dbcaf93c0e8b18bc779f
+
+    git merge FETCH_HEAD
+    git merge 8f24d462f70d69096a51dbcaf93c0e8b18bc779f
+    git merge remotes/origin/master
+
+    git fetch origin master && git merge FETCH_HEAD
+    ==
+    git pull origin master 
+    
+    git pull
+</pre>
+
+<h3>Diverged</h3>
+git status
+<pre>
+    On branch master
+    Your branch and 'origin/master' have diverged,
+    and have 1 and 1 different commits each, respectively.  
+      (use "git pull" to merge the remote branch into yours)
+    
+    nothing to commit, working tree clean
+</pre>
