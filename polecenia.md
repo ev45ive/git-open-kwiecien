@@ -196,3 +196,8 @@ git commit -m "O mnie - MOJE_IMIE_N"
 git push -u origin onas_MOJE_IMIE_N
 git push
 
+
+## Slajdy
+git checkout master
+git pull --rebase mateusz master
+git push origin master
