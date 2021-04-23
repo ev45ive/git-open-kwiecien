@@ -1,0 +1,22 @@
+<h1>Stash</h1>
+
+<p>Zapisz niezapisane zmiany "do szuflady" </p>
+
+<p>Zapisuje poczekalnie jako commit</p>
+<p>Zapisuje katalog roboczy jako commit</p>
+
+<p>git stash - zapisuje poczekalnie i roboczy, bez nieśledzonych</p>
+<pre>
+    Saved working directory and index state WIP on master: 010ee5a Strona - nagłowek i nawigacja
+</pre>
+<p>git stash -u - zapisuje poczekalnie i roboczy, ORAZ nieśledzone pliki</p>
+<p>git stash -m "opis zmian"</p>
+
+<p>git stash list </p>
+<pre>
+stash@{0}: WIP on master: 93616e8 Edycja historii
+stash@{1}: WIP on master: 93616e8 Edycja historii
+</pre>
+
+<p>git stash pop  -- wyjmije z szuflady do roboczego</p>
+<p>git stash apply stash@{0} </p>
