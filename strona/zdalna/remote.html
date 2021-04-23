@@ -1,0 +1,38 @@
+<h1>remote</h1>
+
+<p>Zarzadzamy zdalnymi repozytoriami</p>
+
+<p>
+    git remote add myfork C:/Projects/szkolenia/git-open-kwiecien-fork
+</p>
+
+<h4>Pull</h4>
+<p>Fetch + merge ( + set-upstream / tracking )</p>
+
+<p> git pull myfork zmiany-z-forka:HEAD</p>
+<p> git pull myfork zmiany-z-forka</p>
+<p> git pull origin master:nowa_galaz </p>
+<pre>
+    From C:/Projects/szkolenia/./git-open-kwiecien
+ * [new branch]      master     -> nowa_galaz 
+Already up to date.
+</pre>
+
+<h3>Remote branch tracking</h3>
+git pull
+<pre>
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> moje_zmiany
+
+<pre>
+
+git branch --set-upstream-to=origin/<branch> moje_zmiany
+
+git pull --set-upstream origin master
