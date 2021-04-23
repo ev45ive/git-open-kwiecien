@@ -1,0 +1,30 @@
+<h1>log</h1>
+
+<p>Przegladanie historii</p>
+
+<p>git log [od ktorego hasha] </p>
+<p>git log master </p>
+<p>git log master~2 </p>
+
+<p>git log [do ktorego] --reverse </p>
+
+<p>Limitowanie / filtrowani</p>
+<p>git log -5 </p>
+<p>git log n4093qw4t -- plik.txt plik2.txt </p>
+<p>git log --since="2 hours ago" </p>
+<p>git log --after="2 hours ago" </p>
+<p>git log --grep="tresc opisu commita" </p>
+<p>--author=[pattern]</p>
+<p>--committer=[pattern]</p>
+
+<h3>Commit Formatting</h3>
+--pretty[=format]
+--format=format
+
+<a href="https://git-scm.com/docs/git-log#_pretty_formats">Formats</a>
+oneline, short, medium, full, fuller, reference, email, raw, format:" moj format"
+
+
+<p>git log --all  -- pokaz wszystkie galezie </p>
+<p>git log --all --graph  -- pokaz wszystkie galezie jako graf </p>
+<p>git log --all --graph --decorate -- pokaz wszystkie galezie jako graf i oznacz referencje</p>
