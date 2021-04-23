@@ -1,0 +1,31 @@
+<h1>Branch</h1>
+
+<p>Etykieta wskazujaca na commit (i jego historie)</p>
+
+<p>git commit - przesuwa aktywna galaz na najnowszy commit (budujac historie)</p>
+<p>git checkout - ustawia nas na galezi (widzimy pliki z tej wersji)</p>
+<p>git reset - ustawia galaz na inny commit (widzimy innna historie - z punktu widzenia tego commitu)</p>
+
+<p>git branch - lista branchy</p>
+<pre>
+    WIP_logo
+    WIP_stash
+  * master
+</pre>
+
+<p>tworzy nowy branch</p>
+<p>git branch nazwabrancha - utworz z bieżącej pozycji HEAD</p>
+<p>git branch nazwabrancha [refCommit] - utworz na pozycji refCommit</p>
+
+<p>git branch -d niezmergeowany - nie usuniemy commita ktory nie jest czesca innej galezi </p>
+<p>git branch -D niezmergeowany - WYMUS usuniuecie commita ktory nie jest czesca innej galezi </p>
+
+<h4>Git checkout - przestawienie sie na branch</h4>
+<p>git checkout nazwabranch - przelacz na branch</p>
+<p>git checkout -b nowybranch - utworz nowybranch i przelacz sie nań</p>
+
+<h4>Git switch - zmiana brancha (to samo co wyzej)</h4>
+<p>git switch  nazwabranch - przelacz na branch</p>
+<p>git switch -c nowybranch - utworz nowybranch i przelacz sie nań</p>
+
+<p>git branch -m oldname newname</p>
