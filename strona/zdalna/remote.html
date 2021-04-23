@@ -36,3 +36,22 @@ If you wish to set tracking information for this branch you can do so with:
 git branch --set-upstream-to=origin/<branch> moje_zmiany
 
 git pull --set-upstream origin master
+
+<h4>Push</h4>
+git push origin HEAD:master
+git push origin HEAD:zobacz_moje_zmiany
+
+<h3>Same name branch</h3>
+git push origin master:master
+git push origin master
+
+<h3>tracking</h3>
+git push -u origin moje_zmiany
+Branch 'moje_zmiany' set up to track remote branch 'moje_zmiany' from 'origin'.
+
+<h3>Deleting</h3>
+git push origin :zobacz_moje_zmiany
+<pre>
+    To C:/Projects/szkolenia/./git-open-kwiecien
+     - [deleted]         zobacz_moje_zmiany     
+</pre>
