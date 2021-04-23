@@ -9,9 +9,19 @@
 </head>
 
 <body>
-    <h1>Strona o GIT</h1>
+    <header>
+        <h1>Strona o GIT</h1>
+        <nav>
+            <ul>
+                <li><a href="#praca">Praca</a></li>
+                <li><a href="#przegladanie">Przegladanie</a></li>
+                <li><a href="#edycja">Edycja</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h3>Praca lokalna z git</h3>
+
+    <h3 id="praca">Praca lokalna z git</h3>
     <ul>
         <li><a href="lokalna/config.html">git config</a></li>
         <li><a href="lokalna/init.html">git init</a></li>
@@ -24,14 +34,14 @@
 
     <hr>
 
-    <h3>Przegladanie historii</h3>
+    <h3 id="przegladanie">Przegladanie historii</h3>
     <ul>
         <li><a href="przeglad/log.html">git log</a></li>
         <li><a href="przeglad/show.html">git show</a></li>
         <li><a href="przeglad/diff.html">git diff</a></li>
     </ul>
 
-    <h3>Edycja historii</h3>
+    <h3 id="edycja">Edycja historii</h3>
     <ul>
         <li><a href="edycja/amend.html">amend</a></li>
         <li><a href="edycja/revert.html">revert</a></li>
