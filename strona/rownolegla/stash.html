@@ -20,3 +20,27 @@ stash@{1}: WIP on master: 93616e8 Edycja historii
 
 <p>git stash pop  -- wyjmije z szuflady do roboczego</p>
 <p>git stash apply stash@{0} </p>
+
+<pre>
+git log --oneline -6 --all --graph
+* 4ead3e2 (WIP_stash) Praca rownolegla - stash + navigacja
+| *   cc266a0 (refs/stash) WIP on master: ea90675 WIP - brak nawigacji - Strona - praca rownolegla - stash      
+|/|\
+| | * 13dc1ff untracked files on master: ea90675 WIP - brak nawigacji - Strona - praca rownolegla - stash       
+| * 67063e4 index on master: ea90675 WIP - brak nawigacji - Strona - praca rownolegla - stash
+|/
+* ea90675 (HEAD -> master) WIP - brak nawigacji - Strona - praca rownolegla - stash
+* 010ee5a Strona - nagłowek i nawigacja
+
+PC@DESKTOP-6HIPUQN MINGW64 /c/Projects/szkolenia/git-open-kwiecien (master)
+$ git show --format="raw" cc266a0
+commit cc266a07b39f1556467d3d5d5cd93caaaf89efe1
+tree 3fd1df6743f3400f09f4b721072b54c54898c70d
+parent ea906756bc93654c51ab37884df82fd39d0973bb
+parent 67063e4d9b4f6aa1681b7d6f1b05d3a297a5d5a7
+parent 13dc1ff1d567e33517b442f13537d8f40de190f3
+author Mateusz Kulesza <mateusz@altkomakademia.pl> 1619166722 +0200
+committer Mateusz Kulesza <mateusz@altkomakademia.pl> 1619166722 +0200
+
+    WIP on master: ea90675 WIP - brak nawigacji - Strona - praca rownolegla - stash
+</pre>
