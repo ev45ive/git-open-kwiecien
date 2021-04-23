@@ -178,3 +178,21 @@ c2051b2 Polecenie checkout - wyciaganie starych wersji plikow do poczekalni
 git log --oneline --grep 'test'
 <!-- 8172ab9 Usunieto plik test.txt -->
 
+## Praca zdalna - Pull request
+cd ..
+git clone https://github.com/TWOJA_NAZWA_GIT_TUTAJ/git-open-kwiecien mojfork
+
+cd mojfork
+
+git remote mateusz https://github.com/ev45ive/git-open-kwiecien
+git pull --set-upstream mateusz master
+
+git switch -c onas_MOJE_IMIE_N
+
+echo 'MOJE_IMIE_N' > onas/MOJE_IMIE_N.html
+
+git add .
+git commit -m "O mnie - MOJE_IMIE_N"
+git push -u origin onas_MOJE_IMIE_N
+git push
+
